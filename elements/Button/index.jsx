@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-import { Link } from "next/link";
+import Link from "next/link";
 
 export default function Button(props) {
   const className = [props.className];
@@ -23,11 +23,12 @@ export default function Button(props) {
     if (props.isExternal) {
       return (
         <a
-          href={props.hre}
+          href={props.href}
           className={className.join(" ")}
           style={props.style}
           target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
+          aria-label="isExternal"
         >
           {props.children}
         </a>
@@ -39,6 +40,7 @@ export default function Button(props) {
           className={className.join(" ")}
           style={props.style}
           onClick={onClick}
+          aria-label="isInternal"
         >
           {props.children}
         </Link>
