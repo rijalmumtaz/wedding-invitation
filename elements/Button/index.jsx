@@ -53,6 +53,7 @@ export default function Button(props) {
       className={className.join(" ")}
       style={props.style}
       onClick={onClick}
+      aria-label="button"
     >
       {props.children}
     </button>

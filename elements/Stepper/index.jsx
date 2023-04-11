@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import propTypes from "prop-types";
 
 export default function Stepper(props) {
@@ -25,7 +25,7 @@ export default function Stepper(props) {
 }
 
 Stepper.propTypes = {
-  data: propTypes.object.isRequired,
+  data: propTypes.object,
   intialStep: propTypes.string,
 };
 
