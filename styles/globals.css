@@ -22,4 +22,8 @@
     font-family: "Rozha One";
     src: url('../public/fonts/RozhaOne-Regular.ttf');
 }
+@font-face {
+    font-family: "Bad Script";
+    src: url('../public/fonts/BadScript-Regular.ttf');
+}
 

@@ -19,6 +19,7 @@ module.exports = {
         "passions-conflict": ["Passions Conflict", "cursive"],
         "rozha-one": ["Rozha One", "serif"],
         kapakana: ["Kapakana", "cursive"],
+        "bad-script": ["Bad Script", "cursive"],
       },
     },
   },
