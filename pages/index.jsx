@@ -7,6 +7,14 @@ import { Navbar } from "flowbite-react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const steps = {
+    cover: {
+      content: <p aria-label="cover">cover</p>,
+    },
+    main: {
+      content: <p aria-label="main">isi</p>,
+    },
+  };
   return (
     <>
       <Head>
@@ -24,15 +32,20 @@ export default function Home() {
           href="/favicon.ico"
         />
       </Head>
-      <h1 className="text-3xl font-bold font-kurale">Hello world!</h1>
-      <h1 className="text-3xl font-bold font-noto-sans-symbols">
-        Hello world!
-      </h1>
-      <h1 className="text-3xl font-bold font-passions-conflict">
-        Hello world!
-      </h1>
-      <h1 className="text-3xl font-bold font-rozha-one">Hello world!</h1>
-      <h1 className="text-3xl font-bold font-kapakana">Hello world!</h1>
+      <div className="container bg-red-200">
+        <div className=" bg-green-200">
+          <h1 className="text-3xl font-bold font-kurale">Hello world!</h1>
+          <h1 className="text-3xl font-bold font-noto-sans-symbols">
+            Hello world!
+          </h1>
+          <h1 className="text-3xl font-bold font-passions-conflict">
+            Hello world!
+          </h1>
+          <h1 className="text-3xl font-bold font-rozha-one">Hello world!</h1>
+          <h1 className="text-3xl font-bold font-kapakana">Hello world!</h1>
+          <h1 className="text-3xl font-bold font-bad-script">Hello world!</h1>
+        </div>
+      </div>
     </>
   );
 }
