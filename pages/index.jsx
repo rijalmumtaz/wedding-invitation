@@ -34,16 +34,16 @@ export default function Home() {
       </Head>
       <div className="container bg-red-200">
         <div className=" bg-green-200">
-          <h1 className="text-3xl font-bold font-kurale">Hello world!</h1>
+          <h1 className="text-3xl font-bold font-kurale">Hello Jenni`!</h1>
           <h1 className="text-3xl font-bold font-noto-sans-symbols">
-            Hello world!
+            Hello Jenni`!
           </h1>
           <h1 className="text-3xl font-bold font-passions-conflict">
-            Hello world!
+            Hello Jenni`!
           </h1>
-          <h1 className="text-3xl font-bold font-rozha-one">Hello world!</h1>
-          <h1 className="text-3xl font-bold font-kapakana">Hello world!</h1>
-          <h1 className="text-3xl font-bold font-bad-script">Hello world!</h1>
+          <h1 className="text-3xl font-bold font-rozha-one">Hello Jenni`!</h1>
+          <h1 className="text-3xl font-bold font-kapakana">Hello Jenni`!</h1>
+          <h1 className="text-3xl font-bold font-bad-script">Hello Jenni`!</h1>
         </div>
       </div>
     </>
