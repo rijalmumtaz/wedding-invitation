@@ -1,18 +1,46 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Navbar } from "flowbite-react";
+import Cover from "@/parts/Cover";
+import Invitation from "@/parts/Invitation";
+
+import Stepper, { Controller, MainContent } from "@/elements/Stepper";
+import Button from "@/elements/Button";
+import { useEffect } from "react";
+import Test from "@/parts/Test";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod =
+      element.requestFullScreen ||
+      element.webkitRequestFullScreen ||
+      element.mozRequestFullScreen ||
+      element.msRequestFullScreen;
+
+    if (requestMethod) {
+      // Native full screen.
+      requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") {
+      // Older IE.
+      var wscript = new ActiveXObject("WScript.Shell");
+      if (wscript !== null) {
+        wscript.SendKeys("{F11}");
+      }
+    }
+  }
+
+  useEffect(() => {
+    var elem = document.documentElement;
+    requestFullScreen(elem);
+  });
   const steps = {
     cover: {
-      content: <p aria-label="cover">cover</p>,
+      content: <Test></Test>,
     },
     main: {
-      content: <p aria-label="main">isi</p>,
+      content: <Invitation></Invitation>,
     },
   };
   return (
@@ -32,20 +60,16 @@ export default function Home() {
           href="/favicon.ico"
         />
       </Head>
-      <div className="container bg-red-200">
-        <div className=" bg-green-200">
-          <h1 className="text-3xl font-bold font-kurale">Hello Jenni`!</h1>
-          <h1 className="text-3xl font-bold font-noto-sans-symbols">
-            Hello Jenni`!
-          </h1>
-          <h1 className="text-3xl font-bold font-passions-conflict">
-            Hello Jenni`!
-          </h1>
-          <h1 className="text-3xl font-bold font-rozha-one">Hello Jenni`!</h1>
-          <h1 className="text-3xl font-bold font-kapakana">Hello Jenni`!</h1>
-          <h1 className="text-3xl font-bold font-bad-script">Hello Jenni`!</h1>
-        </div>
-      </div>
+      <Stepper steps={steps}>
+        {(currentStep, steps, prevStep, nextStep) => (
+          <>
+            <MainContent
+              data={steps}
+              current={currentStep}
+            />
+          </>
+        )}
+      </Stepper>
     </>
   );
 }

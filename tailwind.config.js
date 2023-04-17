@@ -21,6 +21,15 @@ module.exports = {
         kapakana: ["Kapakana", "cursive"],
         "bad-script": ["Bad Script", "cursive"],
       },
+      colors: {
+        black: "#112317",
+        brown: "#60453C",
+        white: "#F9F9F9",
+        "white-bg": "#FCFCFC",
+      },
+      backgroundImage: {
+        "cover-bg": "url('/images/Background.jpg')",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],
