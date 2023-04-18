@@ -5,12 +5,17 @@ import Invitation from "@/parts/Invitation";
 
 import Stepper, { Controller, MainContent } from "@/elements/Stepper";
 import Button from "@/elements/Button";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Test from "@/parts/Test";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [data, setdata] = useState({
+    nickname: "",
+    wish: "",
+  });
+
   function requestFullScreen(element) {
     // Supports most browsers and their versions.
     var requestMethod =
@@ -31,13 +36,25 @@ export default function Home() {
     }
   }
 
+  const onChange = (e) => {
+    const target = {
+      ...data,
+      [e.target.name]: [e.target.value],
+    };
+  };
+
   useEffect(() => {
     var elem = document.documentElement;
     requestFullScreen(elem);
   });
   const steps = {
     main: {
-      content: <Invitation></Invitation>,
+      content: (
+        <Invitation
+          data={data}
+          onChange={onChange}
+        ></Invitation>
+      ),
     },
     cover: {
       content: <Test></Test>,

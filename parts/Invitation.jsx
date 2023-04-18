@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Button from "@/elements/Button";
+import InputText from "@/elements/InputText";
 
-export default function Invitation() {
+export default function Invitation({ data, onChange }) {
   return (
     <div className="">
       {/* Quote */}
@@ -153,6 +154,20 @@ export default function Invitation() {
       {/* Wish */}
       <div className="px-[27px] bg-pink-bg flex flex-col items-center">
         <h1 className="font-rozha-one text-4xl text-brown">Give A Wish</h1>
+        <InputText
+          id="nickname"
+          name="nickname"
+          value={data.nickname}
+          placeholder="Nama"
+          onChange={onChange}
+        />
+        <InputText
+          id="wish"
+          name="wish"
+          value={data.wish}
+          placeholder="Wish"
+          onChange={onChange}
+        />
       </div>
       {/* Wish End */}
       {/* Quote */}
