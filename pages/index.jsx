@@ -36,11 +36,11 @@ export default function Home() {
     requestFullScreen(elem);
   });
   const steps = {
-    cover: {
-      content: <Test></Test>,
-    },
     main: {
       content: <Invitation></Invitation>,
+    },
+    cover: {
+      content: <Test></Test>,
     },
   };
   return (

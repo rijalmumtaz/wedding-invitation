@@ -26,9 +26,16 @@ module.exports = {
         brown: "#60453C",
         white: "#F9F9F9",
         "white-bg": "#FCFCFC",
+        "pink-bg": "#FFB4B4",
+        "purple-bg": "#B2A4FF",
       },
       backgroundImage: {
         "cover-bg": "url('/images/Background.jpg')",
+      },
+      letterSpacing: {
+        wide: "0.13em",
+        wider: "0.2em",
+        widest: "0.35em",
       },
     },
   },
