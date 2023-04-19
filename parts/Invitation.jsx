@@ -134,9 +134,9 @@ export default function Invitation({ data, onChange }) {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d988.6963812876905!2d109.1500556!3d-7.598305600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMzUnNTMuOSJTIDEwOcKwMDknMDAuMiJF!5e0!3m2!1sen!2sid!4v1681805380795!5m2!1sen!2sid"
             className="w-[237px] h-[237px] border-0 shadow-lg rounded"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <Button
             type="link"

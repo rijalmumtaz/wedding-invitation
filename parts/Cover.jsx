@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import FooterCover from "./FooterCover";
 import Button from "@/elements/Button";
 
-export default function Cover({ nextStep }) {
+export default function Cover({ onClick }) {
   // max-[410px]:mt-0
   return (
     <>
@@ -41,7 +41,7 @@ export default function Cover({ nextStep }) {
             isOutline
             isBase
             className="border-white text-white"
-            onClick={nextStep}
+            onClick={onClick}
           >
             Open Invitation
           </Button>
