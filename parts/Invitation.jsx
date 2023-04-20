@@ -3,7 +3,8 @@ import Image from "next/image";
 import Button from "@/elements/Button";
 import InputText from "@/elements/InputText";
 
-export default function Invitation({ data, onChange }) {
+export default function Invitation(props) {
+  const { data } = props;
   return (
     <div className="">
       {/* Quote */}
@@ -162,7 +163,7 @@ export default function Invitation({ data, onChange }) {
             name="nickname"
             value={data.nickname}
             placeholder="Nama"
-            onChange={onChange}
+            onChange={props.onChange}
           />
           <InputText
             id="wish"
@@ -170,7 +171,7 @@ export default function Invitation({ data, onChange }) {
             type="textarea"
             value={data.wish}
             placeholder="Wish"
-            onChange={onChange}
+            onChange={props.onChange}
           />
         </div>
       </div>

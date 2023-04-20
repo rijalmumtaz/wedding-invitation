@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 export default function InputText(props) {
-  const { name, value, type, placeholder, outerClassName, inputClassName } =
+  const { value, type, placeholder, name, outerClassName, inputClassName } =
     props;
   const onChange = (e) => {
     const target = {
@@ -11,6 +11,7 @@ export default function InputText(props) {
         value: e.target.value,
       },
     };
+    props.onChange(target);
   };
 
   if (type === "textarea") {
@@ -23,7 +24,7 @@ export default function InputText(props) {
             value={value}
             onChange={onChange}
             className={[
-              `bg-transparent rounded-md border-brown border-2 w-[264px] placeholder:font-kurale placeholder:text-sm h-[141px]`,
+              `bg-transparent font-kurale !z-50 text-brown rounded-md border-brown border-2 w-[264px] placeholder:font-kurale placeholder:text-sm h-[141px] overflow-hidden`,
               inputClassName,
             ].join(" ")}
             cols="30"
@@ -43,7 +44,7 @@ export default function InputText(props) {
           value={value}
           onChange={onChange}
           className={[
-            `bg-transparent rounded-md border-brown border-2 w-[264px] placeholder:font-kurale placeholder:text-sm`,
+            `bg-transparent font-kurale !z-50 rounded-md text-brown border-brown border-2 w-[264px] placeholder:font-kurale placeholder:text-sm`,
             inputClassName,
           ].join(" ")}
         />

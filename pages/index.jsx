@@ -1,52 +1,51 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
+
 import Cover from "@/parts/Cover";
 import Invitation from "@/parts/Invitation";
+import Test from "@/parts/Test";
 
 import Stepper, { Controller, MainContent } from "@/elements/Stepper";
 import Button from "@/elements/Button";
-import { useEffect, useState } from "react";
-import Test from "@/parts/Test";
+import React, { useEffect, useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  const [data, setdata] = useState({
+export default function Home(props) {
+  const [data, setData] = useState({
     nickname: "",
     wish: "",
   });
 
-  function requestFullScreen(element) {
-    // Supports most browsers and their versions.
-    var requestMethod =
-      element.requestFullScreen ||
-      element.webkitRequestFullScreen ||
-      element.mozRequestFullScreen ||
-      element.msRequestFullScreen;
+  // function requestFullScreen(element) {
+  //   // Supports most browsers and their versions.
+  //   var requestMethod =
+  //     element.requestFullScreen ||
+  //     element.webkitRequestFullScreen ||
+  //     element.mozRequestFullScreen ||
+  //     element.msRequestFullScreen;
 
-    if (requestMethod) {
-      // Native full screen.
-      requestMethod.call(element);
-    } else if (typeof window.ActiveXObject !== "undefined") {
-      // Older IE.
-      var wscript = new ActiveXObject("WScript.Shell");
-      if (wscript !== null) {
-        wscript.SendKeys("{F11}");
-      }
-    }
-  }
+  //   if (requestMethod) {
+  //     // Native full screen.
+  //     requestMethod.call(element);
+  //   } else if (typeof window.ActiveXObject !== "undefined") {
+  //     // Older IE.
+  //     var wscript = new ActiveXObject("WScript.Shell");
+  //     if (wscript !== null) {
+  //       wscript.SendKeys("{F11}");
+  //     }
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   var elem = document.documentElement;
+  //   requestFullScreen(elem);
+  // });
 
   const onChange = (e) => {
-    const target = {
+    setData({
       ...data,
-      [e.target.name]: [e.target.value],
-    };
+      [e.target.name]: e.target.value,
+    });
   };
 
-  useEffect(() => {
-    var elem = document.documentElement;
-    requestFullScreen(elem);
-  });
   const steps = {
     main: {
       content: (
