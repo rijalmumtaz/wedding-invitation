@@ -11,6 +11,7 @@ export default function InputText(props) {
         value: e.target.value,
       },
     };
+    // using props for calling onChange func from parent
     props.onChange(target);
   };
 

@@ -153,11 +153,11 @@ export default function Invitation(props) {
       </div>
       {/* Date End */}
       {/* Wish */}
-      <div className="px-[27px] bg-pink-bg flex flex-col items-center">
+      <div className="px-[27px] bg-pink-bg flex flex-col items-center py-[58px]">
         <h1 className="font-rozha-one text-4xl text-brown mb-[30px]">
           Give A Wish
         </h1>
-        <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px] mb-10">
           <InputText
             id="nickname"
             name="nickname"
@@ -174,6 +174,15 @@ export default function Invitation(props) {
             onChange={props.onChange}
           />
         </div>
+        <Button
+          type="link"
+          isBase
+          isExternal
+          isPrimary
+          className="text-white bg-brown"
+        >
+          Kirim Wish
+        </Button>
       </div>
       {/* Wish End */}
       {/* Quote */}
