@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Button from "@/elements/Button";
 import InputText from "@/elements/InputText";
+import Music from "./Music";
 
 export default function Invitation(props) {
   const { data } = props;
   return (
     <div className="">
+      <Music />
       {/* Quote */}
       <div className="px-[27px] bg-white-bg flex flex-col items-center pt-[50px] pb-[61px]">
         <Image
