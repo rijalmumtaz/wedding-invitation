@@ -21,6 +21,9 @@ export default function Music() {
 
   useEffect(() => {
     sound.play();
+    return () => {
+      sound.stop();
+    };
   }, []);
 
   const togglePlay = () => {
@@ -40,7 +43,7 @@ export default function Music() {
         type="button"
         isBase
         isPrimary
-        className={`fixed bg-brown h-14 w-14 rounded-[500%] z-20 bottom-5 right-5 shadow-lg ${
+        className={`fixed bg-brown h-14 w-14 rounded-[50%] z-20 bottom-5 right-5 shadow-lg ${
           animation && "animate-spin"
         }`}
         onClick={togglePlay}
