@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Fade } from "react-reveal";
 
@@ -8,6 +8,7 @@ import Music from "./Music";
 
 export default function Invitation(props) {
   const { data } = props;
+
   return (
     <div className="">
       <Music />
@@ -322,14 +323,22 @@ export default function Invitation(props) {
             delay={600}
           >
             <Button
-              type="link"
+              type="button"
               isBase
               isExternal
               isPrimary
-              className="text-white bg-brown"
+              className="text-white bg-brown z-30"
+              onClick={props.onClick}
             >
               Kirim Wish
             </Button>
+          </Fade>
+          <Fade>
+            {props.message && (
+              <span className="font-kurale text-sm text-center mt-3">
+                Thanks, Atas Doanya ❤️
+              </span>
+            )}
           </Fade>
         </div>
         {/* Wish End */}

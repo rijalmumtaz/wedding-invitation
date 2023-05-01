@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const instace = axios.create({
-  baseURL: `${process.env.REACT_APP_HOST}/api/v1/member`,
+const instance = axios.create({
+  baseURL: `${process.env.NEXT_PUBLIC_API_URL}/api/v1/member`,
 });
 
-instace.interceptors.response.use((response) => response);
+instance.interceptors.response.use((response) => response);
 
-export default instace;
+export default instance;

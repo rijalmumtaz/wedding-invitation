@@ -1,4 +1,3 @@
-import { initAccordions } from "flowbite";
 import { GIVE_WISH } from "../types";
 
 const initialState = null;

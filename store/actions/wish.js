@@ -1,9 +1,7 @@
-import axios from "axios";
-import { GIVE_WISH } from "../types";
-import { RiPlaystationLine } from "react-icons/ri";
+import axios from "configs/axios";
 
 export const giveWish = (payload) => () => {
-  return axios.post(`/wishes-page`, payload, {
+  return axios.post(`/invitation-page`, payload, {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
