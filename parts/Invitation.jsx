@@ -328,7 +328,7 @@ export default function Invitation(props) {
                 isBase
                 isExternal
                 isPrimary
-                className="text-white bg-brown z-30"
+                className="text-white bg-brown z-30 mb-3"
                 onClick={props.onClick}
               >
                 Kirim Wish
@@ -337,7 +337,7 @@ export default function Invitation(props) {
           )}
           <Fade>
             {props.message && (
-              <span className="font-kurale text-sm text-center mt-3">
+              <span className="font-kurale text-sm text-center">
                 Thanks, Atas Doanya ❤️
               </span>
             )}

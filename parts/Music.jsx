@@ -10,7 +10,7 @@ export default function Music() {
     new Howl({
       src: ["/audios/Rey Mbayang  Di Sepertiga Malam.mp3"],
       // autoplay: true,
-      volume: 0.3,
+      volume: 0.8,
       html5: true,
       loop: true,
       onend: function () {
