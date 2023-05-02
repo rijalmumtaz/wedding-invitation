@@ -318,21 +318,23 @@ export default function Invitation(props) {
               />
             </Fade>
           </div>
-          <Fade
-            bottom
-            delay={600}
-          >
-            <Button
-              type="button"
-              isBase
-              isExternal
-              isPrimary
-              className="text-white bg-brown z-30"
-              onClick={props.onClick}
+          {data.nickname !== "" && data.wish !== "" && (
+            <Fade
+              bottom
+              delay={600}
             >
-              Kirim Wish
-            </Button>
-          </Fade>
+              <Button
+                type="button"
+                isBase
+                isExternal
+                isPrimary
+                className="text-white bg-brown z-30"
+                onClick={props.onClick}
+              >
+                Kirim Wish
+              </Button>
+            </Fade>
+          )}
           <Fade>
             {props.message && (
               <span className="font-kurale text-sm text-center mt-3">

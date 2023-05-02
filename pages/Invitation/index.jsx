@@ -8,12 +8,10 @@ function InvitationPage(props) {
   const [data, setData] = useState({
     nickname: "",
     wish: "",
-    date: Date(),
+    // date: Date().toString(),
   });
 
   const [message, setMessage] = useState(false);
-
-  console.log(data.date);
 
   const { wish } = props;
 
@@ -47,7 +45,7 @@ function InvitationPage(props) {
 
     payload.append("name", data.nickname);
     payload.append("wish", data.wish);
-    payload.append("date", data.date);
+    // payload.append("date", data.date);
 
     props.giveWish(payload).then(() => {
       setMessage(true);

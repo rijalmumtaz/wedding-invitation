@@ -17,7 +17,7 @@ function WishesPage(props) {
   if (!page.hasOwnProperty("wishPage")) return null;
 
   return (
-    <div className="flex flex-col items-center bg-cover-bg bg-cover bg-scroll h-full">
+    <div className="flex flex-col items-center bg-cover-bg bg-cover overflow-hidden h-full">
       <h1 className="text-3xl bg-white-bg w-full text-center py-3 font-rozha-one fixed shadow-xl">
         Ucapan dan Doa
       </h1>
